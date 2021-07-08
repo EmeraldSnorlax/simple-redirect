@@ -33,7 +33,14 @@
         class="text-white text-center text-3xl my-4 transition-all
         {paused === true ? 'text-true-gray-400' : ''}"
       >
-        Redirecting in <span class="font-mono">{remaining.toFixed(0)}</span> seconds.
+        {#if !paused}
+          <span
+            >Redirecting in <span class="font-mono">{remaining.toFixed(0)}</span
+            > seconds.</span
+          >
+        {:else}
+          <span>You hovered the footer, so we paused this.</span>
+        {/if}
       </p>
     </div>
     <div
