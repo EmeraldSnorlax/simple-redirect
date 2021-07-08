@@ -63,7 +63,7 @@
   class="absolute bottom-0 text-true-gray-300 bg-true-gray-800 w-full lg:flex lg:items-center lg:justify-between p-4"
 >
   <p>this redirect page is subject to disappear at any time. please inform the site owner from which you clicked this to update their links.</p>
-  <a>source code</a>
+  <a rel="noopener" target="_blank" href="https://github.com/EmeraldSnorlax/simple-redirect">source code</a>
 </footer>
 
 <slot />
