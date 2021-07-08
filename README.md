@@ -3,6 +3,33 @@
 
 A client side redirect service.
 
+## Adapting for your domain
+
+Edit `app.html` to change the text shown to users with JavaScript disabled.
+
+Edit `src/routes/__layout.svelte` to change the destination and text:
+
+```ts
+// ...
+if (browser) {
+  // Replace snorlax.cc with your old domain, and snorlax.sh with your new domain.
+  destination = window.location.href.replace("snorlax.cc", "snorlax.sh");
+  const tick = setInterval(() => {
+// ...
+```
+
+```html
+<!-- ... -->
+<h1 class="text-white text-5xl text-center">snorlax.cc is moving...</h1>
+<p class="text-true-gray-300 text-center text-xl my-2">
+  The new location for this content is <a href={destination}
+    >{destination}</a
+  >
+</p>
+<!-- ... -->
+```
+
+This can be hosted on any static content host, eg Cloudflare Pages.
 
 ## Scripts
 
