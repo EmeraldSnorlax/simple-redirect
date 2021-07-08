@@ -62,7 +62,7 @@
   }}
   class="absolute bottom-0 text-true-gray-300 bg-true-gray-800 w-full lg:flex lg:items-center lg:justify-between p-4"
 >
-  <p>fun fact: tiny text makes any footer look better.</p>
+  <p>this redirect page is subject to disappear at any time. please inform the site owner from which you clicked this to update their links.</p>
   <a>source code</a>
 </footer>
 
