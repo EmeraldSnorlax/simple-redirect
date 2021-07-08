@@ -1,12 +1,12 @@
 <script>
   import { browser } from "$app/env";
-  import { fade } from "svelte/transition";
-
   import "../app.postcss";
+
   const redirectWait = 7;
   let remaining = redirectWait;
   let destination;
   let paused = false;
+
   if (browser) {
     destination = window.location.href.replace("snorlax.cc", "snorlax.sh");
     const tick = setInterval(() => {
@@ -62,8 +62,15 @@
   }}
   class="absolute bottom-0 text-true-gray-300 bg-true-gray-800 w-full lg:flex lg:items-center lg:justify-between p-4"
 >
-  <p>this redirect page is subject to disappear at any time. please inform the site owner from which you clicked this to update their links.</p>
-  <a rel="noopener" target="_blank" href="https://github.com/EmeraldSnorlax/simple-redirect">source code</a>
+  <p>
+    this redirect page is subject to disappear at any time. please inform the
+    site owner from which you clicked this to update their links.
+  </p>
+  <a
+    rel="noopener"
+    target="_blank"
+    href="https://github.com/EmeraldSnorlax/simple-redirect">source code</a
+  >
 </footer>
 
 <slot />
